@@ -4547,7 +4547,7 @@ hr {
   14. Cards
 ----------------------------------------------------------------*/
 .cs_card.cs_style_1 .cs_card_thumbnail {
-  padding-left: 40px;
+  padding-left: 0px;
   overflow-y: clip;
 }
 .cs_card.cs_style_1 .cs_card_thumbnail > img {
