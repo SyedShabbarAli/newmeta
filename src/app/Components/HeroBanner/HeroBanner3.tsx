@@ -31,8 +31,7 @@ const HeroBanner3 = () => {
                   </a>
                   <div className="cs_client_info_wrapper">
                     <div>
-                      <h3 className="cs_fs_30 cs_semibold cs_white_color">10s</h3>
-                      <p className="cs_white_color mb-0">Integration time—not days</p>
+
                     </div>
                   </div>
                 </div>
@@ -47,5 +46,6 @@ const HeroBanner3 = () => {
     </section>
   );
 };
+
 
 export default HeroBanner3;     
