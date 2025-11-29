@@ -9,7 +9,7 @@ const About1 = () => {
           <div className="row cs_gap_y_50 position-relative z-1">
             <div className="col-lg-5">
               <div className="cs_card_thumbnail position-relative">
-                <Image src="/assets/mechanism-C1_qKy7Y.gif" alt="img" width={486} height={548}   />  
+                <Image src="/assets/img/cyber-security-concept-shield-on-circuit-board-digital-lines-vector-illustration-isolated-on-white-RG4B7A.jpeg" alt="img" width={486} height={548}   />  
                 <div className="cs_about_mask_shape_1 position-absolute">
                 </div>
                 <div className="cs_elipse_1 cs_radius_100 position-absolute"></div>
@@ -58,5 +58,6 @@ const About1 = () => {
     </section>
     );
 };
+
 
 export default About1;
