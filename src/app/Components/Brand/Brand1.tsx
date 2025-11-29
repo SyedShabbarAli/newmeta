@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 const Brand1 = () => {
 
@@ -21,15 +22,15 @@ const Brand1 = () => {
           <div className="cs_slider_in">
             <div className="cs_brands_list">
             {chooseContent.map((item, i) => (
-              <div key={i} className="cs_center">
-                <img src={item.img} alt="brand-img" />
+              <div key={`list-1-${i}`} className="cs_center">
+                <Image src={item.img} alt="brand logo" width={140} height={48} />
               </div>
                 ))}
             </div>
             <div className="cs_brands_list">
             {chooseContent.map((item, i) => (
-              <div key={i} className="cs_center">
-               <img src={item.img} alt="brand-img" />
+              <div key={`list-2-${i}`} className="cs_center">
+                <Image src={item.img} alt="brand logo" width={140} height={48} />
               </div>
                 ))}
             </div>

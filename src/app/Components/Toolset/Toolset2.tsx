@@ -26,7 +26,7 @@ const Toolset2 = () => {
             {brandContent.map((item, i) => (
             <div key={i} className="cs_iconbox cs_style_3 cs_center_column cs_white_bg cs_radius_16 text-center">
               <span className="cs_iconbox_icon cs_mb_14">
-              <img src={item.img} alt="Slack icon" />
+                <Image src={item.img} alt={`${item.title} icon`} width={48} height={48} />
               </span>
               <p className="cs_medium mb-0">{item.title}</p>
             </div>
