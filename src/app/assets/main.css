@@ -2489,16 +2489,18 @@ hr {
   background: linear-gradient(197deg, #E3FFCD -22.98%, rgba(250, 248, 255, 0) 99.39%);
   top: -220px;
   right: -150px;
+  display:none;
 }
 
 .cs_elipse_3 {
   background: linear-gradient(197deg, #E3FFCD -22.98%, rgba(250, 248, 255, 0) 99.39%);
   top: -220px;
   right: -220px;
+  display:none
 }
 
 .cs_elipse_4 {
-  background: linear-gradient(205deg, #E3FFCD -14.5%, rgba(227, 255, 205, 0) 89.88%);
+  background: linear-gradient(135deg, var(--button-gradient-start) 0%, #2de6ff26 100%);
   top: -190px;
   right: -150px;
 }
