@@ -45,7 +45,7 @@ const Choose2 = () => {
                 </li>
                 <li>
                   <span className="cs_bullet_dot" aria-hidden="true"></span>
-                  <h3 className="cs_fs_18 cs_normal mb-0">Edge-to-cloud auditing for IEC 62443 readiness.</h3>
+                  <h3 className="cs_fs_18 cs_normal mb-10">Edge-to-cloud auditing for IEC 62443 readiness.</h3>
                 </li>
               </ul>
               <a href="#contact" aria-label="Request a demo" className="cs_btn cs_style_1 cs_bg_1 cs_fs_14 cs_white_color cs_bold text-uppercase">
@@ -72,5 +72,6 @@ const Choose2 = () => {
     </section>
     );
 };
+
 
 export default Choose2;
