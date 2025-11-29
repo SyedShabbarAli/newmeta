@@ -31,15 +31,15 @@ const About1 = () => {
                 <ul className="cs_list cs_mp_0 cs_bullet_list cs_mb_22">
                   <li>
                     <span className="cs_bullet_dot" aria-hidden="true"></span>
-                    <h3 className="cs_fs_18 cs_semibold mb-0">End-to-end data protection spanning device, mobile, and cloud.</h3>
+                    <h3 className="cs_fs_16 cs_semibold mb-0">End-to-end data protection spanning device, mobile, and cloud.</h3>
                   </li>
                   <li>
                     <span className="cs_bullet_dot" aria-hidden="true"></span>
-                    <h3 className="cs_fs_18 cs_semibold mb-0">Energy-efficient protocols tuned for battery-sensitive wearables.</h3>
+                    <h3 className="cs_fs_16 cs_semibold mb-0">Energy-efficient protocols tuned for battery-sensitive wearables.</h3>
                   </li>
                   <li>
                     <span className="cs_bullet_dot" aria-hidden="true"></span>
-                    <h3 className="cs_fs_18 cs_semibold mb-0">Drop-in software stack requiring zero hardware redesign.</h3>
+                    <h3 className="cs_fs_16 cs_semibold mb-10">Drop-in software stack requiring zero hardware redesign.</h3>
                   </li>
                 </ul>
                 <a href="#contact" aria-label="Request a demo" className="cs_btn cs_style_1 cs_bg_1 cs_fs_14 cs_white_color cs_bold text-uppercase">
@@ -61,4 +61,5 @@ const About1 = () => {
 
 
 export default About1;
+
 
