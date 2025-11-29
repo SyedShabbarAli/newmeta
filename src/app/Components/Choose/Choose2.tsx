@@ -30,21 +30,21 @@ const Choose2 = () => {
                 <h2 className="cs_section_title cs_fs_48 cs_semibold mb-0 wow fadeInUp">Secure communication where lives and uptime matter</h2>
               </div>
               <p className="cs_card_desc cs_mb_32">From remote care to critical infrastructure, MetaCrust keeps telemetry encrypted, battery conscious, and compliant across every hop—without forcing a hardware redesign.</p>
-              <ul className="cs_list cs_style_1 cs_mp_0">
+              <ul className="cs_list cs_mp_0 cs_bullet_list">
                 <li>
-                   <Image src="/assets/img/icons/checkbox.svg" alt="img" width={30} height={30}   /> 
+                  <span className="cs_bullet_dot" aria-hidden="true"></span>
                   <h3 className="cs_fs_18 cs_normal mb-0">Remote patient monitoring with HIPAA/PIPEDA alignment.</h3>
                 </li>
                 <li>
-                   <Image src="/assets/img/icons/checkbox.svg" alt="img" width={30} height={30}   /> 
+                  <span className="cs_bullet_dot" aria-hidden="true"></span>
                   <h3 className="cs_fs_18 cs_normal mb-0">Workplace safety badges that maintain &lt;15% battery overhead.</h3>
                 </li>
                 <li>
-                   <Image src="/assets/img/icons/checkbox.svg" alt="img" width={30} height={30}   /> 
+                  <span className="cs_bullet_dot" aria-hidden="true"></span>
                   <h3 className="cs_fs_18 cs_normal mb-0">Environmental sensing fleets with lossless sync over spotty links.</h3>
                 </li>
                 <li>
-                   <Image src="/assets/img/icons/checkbox.svg" alt="img" width={30} height={30}   /> 
+                  <span className="cs_bullet_dot" aria-hidden="true"></span>
                   <h3 className="cs_fs_18 cs_normal mb-0">Edge-to-cloud auditing for IEC 62443 readiness.</h3>
                 </li>
               </ul>

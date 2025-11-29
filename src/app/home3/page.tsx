@@ -3,7 +3,7 @@ import About1 from '../Components/About/About1';
 import Feature3 from '../Components/Feature/Feature3';
 import Choose2 from '../Components/Choose/Choose2';
 import Brand3 from '../Components/Brand/Brand3';
-import Choose3 from '../Components/Choose/Choose3';
+
 import Counter2 from '../Components/Counter/Counter2';
 import Testimonial3 from '../Components/Testimonial/Testimonial3';
 import Faq2 from '../Components/Faq/Faq2';
@@ -13,7 +13,7 @@ import Cta1 from '../Components/Cta/Cta1';
 
 const page = () => {
     return (
-        <div>
+        <div className="home3-page">
             <HeroBanner3></HeroBanner3>
             <About1></About1>
             <Feature3></Feature3>

@@ -33,8 +33,8 @@
   --body-color: #788094;
   --accent-color: #0E9FD6;
   --border-color: #D8DDE1;
-  --theme-color-1: #E3FFCD;
-  --theme-color-2: #7341F1;
+  --theme-color: #0158FB;
+  --theme-color-2: #EB2891;
   --theme-color-3: #FED91F;
   --theme-color-4: #E3FFCD;
   --theme-color-5: #F16615;
@@ -46,6 +46,28 @@
   --button-gradient: linear-gradient(135deg, var(--button-gradient-start) 0%, var(--button-gradient-end) 100%);
   --heading-font: "Sora", sans-serif;
   --body-font: "DM Sans", sans-serif;
+}
+
+.home3-page .cs_hero_title {
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+.home3-page .cs_card_thumbnail{
+margin-bottom: 30px;
+}
+.home3-page .cs_section_title {
+  font-size: 38px;
+  line-height: 1.3;
+}
+
+@media (max-width: 991px) {
+  .home3-page .cs_hero_title {
+    font-size: 32px;
+  }
+  .home3-page .cs_section_title {
+    font-size: 32px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1594,12 +1616,12 @@ textarea {
 }
 @media (max-width: 1199px) {
   .cs_fs_74 {
-    font-size: 64px;
+    font-size: 44px;
   }
 }
 @media (max-width: 575px) {
   .cs_fs_74 {
-    font-size: 52px;
+    font-size: 32px;
   }
 }
 
@@ -2022,6 +2044,29 @@ hr {
 .cs_btn.cs_style_1 i {
   text-shadow: -20px 0px 0px currentColor;
   transition: all 0.3s ease;
+}
+
+.cs_bullet_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 18px;
+}
+
+.cs_bullet_list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.cs_bullet_dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 7px;
+  background: var(--button-gradient);
+  flex-shrink: 0;
 }
 .cs_btn.cs_style_1:hover {
   color: var(--heading-color);
