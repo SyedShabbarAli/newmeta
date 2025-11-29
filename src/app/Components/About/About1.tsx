@@ -28,7 +28,7 @@ const About1 = () => {
                 <p className="cs_card_desc cs_mb_22">
                   MetaCrust is a lightweight software platform that powers secure, energy-efficient communication and real-time monitoring for wearable and IoT health devices. It protects data across device, mobile, and cloud without draining battery life or forcing hardware redesigns.
                 </p>
-                <ul className="cs_list cs_mp_0 cs_bullet_list">
+                <ul className="cs_list cs_mp_0 cs_bullet_list cs_mb_22">
                   <li>
                     <span className="cs_bullet_dot" aria-hidden="true"></span>
                     <h3 className="cs_fs_18 cs_semibold mb-0">End-to-end data protection spanning device, mobile, and cloud.</h3>
@@ -61,3 +61,4 @@ const About1 = () => {
 
 
 export default About1;
+
