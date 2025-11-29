@@ -5,9 +5,9 @@ import { useEffect, useRef, useState } from "react";
 const Faq2 = () => {
 
             const faqContent = [
-            {title:'What pricing plans do you offer for your app?', content:'No, we are transparent about our pricing structure, and there are hidden fees or additional charges. The price you see is the price you pay'},
-            {title:'Are there any hidden fees or additional charges?', content:'No, we are transparent about our pricing structure, and there are hidden fees or additional charges. The price you see is the price you pay'},
-            {title:'What payment methods do you accept?', content:'No, we are transparent about our pricing structure, and there are hidden fees or additional charges. The price you see is the price you pay'},
+            {title:'Mission', content:'Deliver lightweight, adaptable security that preserves battery life, protects data across every node, and keeps devices fully functional without hardware redesigns.'},
+            {title:'Vision', content:'Empower a future where every low-powered device—wearables, edge nodes, and sensors—is secure, connected, and built to last.'},
+            {title:'Utilizations', content:'Remote patient monitoring, workplace safety monitoring, and environmental data monitoring rely on MetaCrust to sync encrypted telemetry in real time.'},
           ]; 
     
           const accordionContentRef = useRef(null);
@@ -36,7 +36,7 @@ const Faq2 = () => {
         <div className="row cs_gap_y_30 align-items-center position-relative z-1">
           <div className="col-lg-6 order-lg-2">
             <div className="cs_faq_thumbnail">
-              <Image src="/assets/img/faq-img-1.png" alt="img" width={636} height={512}   />   
+              <Image src="/assets/futuristic-technology-concept.jpg" alt="Futuristic technology concept" width={636} height={512}   />   
             </div>
           </div>
           <div className="col-lg-6 order-lg-1">
@@ -44,12 +44,12 @@ const Faq2 = () => {
               <div className="cs_section_heading cs_style_1 cs_mb_20">
                 <div className="cs_section_subtitle cs_fs_18 cs_heading_color cs_mb_22">
                   <Image src="/assets/img/icons/star-1.svg" alt="img" width={15} height={15}   />   
-                  <span>faq</span>
+                  <span>MetaCrust Pillars</span>
                   <Image src="/assets/img/icons/star-1.svg" alt="img" width={15} height={15}   />   
                 </div>
-                <h2 className="cs_section_title cs_fs_48 cs_semibold mb-0 wow fadeInDown">Frequently Ask Questions</h2>
+                <h2 className="cs_section_title cs_fs_48 cs_semibold mb-0 wow fadeInDown">Mission, vision, and real-world utilization</h2>
               </div>
-              <p className="cs_card_desc cs_mb_56">Highlight the most important features and functionalities of the app. Use concise descriptions or bullet points to emphasize what sets your app</p>
+              <p className="cs_card_desc cs_mb_56">MetaCrust protects patient, workforce, and environmental data streams with drop-in software. Explore how our mission, vision, and deployment scenarios come together.</p>
               <div className="cs_faq_wrapper_1">
 
                 {faqContent.map((item, index) => (

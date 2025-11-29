@@ -31,7 +31,7 @@
   --black-color: #000;
   --heading-color: #1A1A2E;
   --body-color: #788094;
-  --accent-color: #013228;
+  --accent-color: #0E9FD6;
   --border-color: #D8DDE1;
   --theme-color-1: #E3FFCD;
   --theme-color-2: #7341F1;
@@ -41,6 +41,9 @@
   --green-color: #62EC30;
   --gray-color-1: #F5F7FA;
   --gray-color-2: #ECF1F5;
+  --button-gradient-start: #C3F7FE;
+  --button-gradient-end: #2DE6FF;
+  --button-gradient: linear-gradient(135deg, var(--button-gradient-start) 0%, var(--button-gradient-end) 100%);
   --heading-font: "Sora", sans-serif;
   --body-font: "DM Sans", sans-serif;
 }
@@ -1708,6 +1711,28 @@ textarea {
   background-color: var(--theme-color-4);
 }
 
+/* Remove background images from sections and common section wrappers */
+section,
+.cs_hero_content,
+.cs_section,
+.cs_bg_filed,
+section[style*="background-image"],
+div[style*="background-image"] {
+  background-image: none !important;
+}
+
+/* Also neutralize background images applied via pseudo elements on these wrappers */
+section::before,
+section::after,
+.cs_hero_content::before,
+.cs_hero_content::after,
+.cs_section::before,
+.cs_section::after,
+.cs_bg_filed::before,
+.cs_bg_filed::after {
+  background-image: none !important;
+}
+
 .cs_body_bg {
   background-color: var(--body-color);
 }
@@ -1975,9 +2000,13 @@ hr {
   gap: 8px;
   position: relative;
   transition: all 0.5s ease;
+  background-image: var(--button-gradient);
+  background-color: transparent;
+  color: var(--heading-color);
 }
 .cs_btn.cs_style_1.cs_bg_1 {
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background-image: var(--button-gradient);
+  background-color: transparent;
 }
 .cs_btn.cs_style_1.cs_outline {
   border: 1px solid var(--heading-color);
@@ -1995,20 +2024,101 @@ hr {
   transition: all 0.3s ease;
 }
 .cs_btn.cs_style_1:hover {
-  color: var(--white-color);
+  color: var(--heading-color);
+  background-image: linear-gradient(135deg, var(--button-gradient-end) 0%, var(--button-gradient-start) 100%);
 }
 .cs_btn.cs_style_1:hover.cs_bg_1 {
-  background: linear-gradient(245deg, #551DFF -77.04%, #D324A8 119.05%);
+  background-image: linear-gradient(135deg, var(--button-gradient-end) 0%, var(--button-gradient-start) 100%);
 }
 .cs_btn.cs_style_1:hover.cs_outline {
   background-color: var(--heading-color);
 }
 .cs_btn.cs_style_1:hover.cs_theme_bg_4 {
   color: var(--heading-color);
-  background-color: var(--theme-color-3);
+  background-image: linear-gradient(135deg, var(--button-gradient-end) 0%, var(--button-gradient-start) 100%);
 }
 .cs_btn.cs_style_1:hover i {
   transform: translateX(20px);
+}
+
+.cs_video_embed {
+  position: relative;
+  width: 100%;
+  padding-top: 62%;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0px 30px 80px rgba(4, 13, 38, 0.35);
+}
+
+.cs_video_iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.cs_video_thumbnail {
+  position: relative;
+  margin-top: 30px;
+  border-radius: 32px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0px 30px 80px rgba(4, 13, 38, 0.25);
+}
+
+.cs_video_thumbnail_title {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  padding: 16px 22px;
+  font-size: 24px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.cs_video_thumbnail_img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.cs_video_thumbnail_overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.45);
+  transition: background-color 0.3s ease;
+}
+
+.cs_video_thumbnail:hover .cs_video_thumbnail_overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.cs_video_thumbnail_play {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cs_video_thumbnail:hover .cs_video_thumbnail_play {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.cs_video_thumbnail_play_icon {
+  width: 32px;
+  height: 32px;
+  color: #e11d48;
 }
 @media (max-width: 575px) {
   .cs_btn.cs_style_1 {
@@ -2089,7 +2199,7 @@ hr {
   width: 100%;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2222,7 +2332,7 @@ hr {
   margin: 0;
 }
 .cs_page_heading .breadcrumb-item {
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2581,7 +2691,7 @@ hr {
 }
 .cs_accordian.cs_style_2.active .cs_accordian_toggler {
   color: var(--white-color);
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
   transform: rotate(180deg);
 }
 @media (max-width: 575px) {
@@ -2723,10 +2833,28 @@ hr {
   min-width: 100%;
   flex: none;
   display: flex;
-  align-items: center;
-  gap: 100px;
+  gap: 50px;
   margin: 0 50px;
   animation: slider-left 30s linear infinite;
+}
+.cs_horizontal_slider_wrapper .cs_brands_list > div {
+  width: 170px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.cs_horizontal_slider_wrapper .cs_brands_list img {
+  width: 140px;
+  height: 70px;
+  object-fit: contain;
+  filter: grayscale(0.1);
+}
+.cs_horizontal_slider_wrapper .cs_brands_list img:hover {
+  filter: none;
 }
 .cs_horizontal_slider_wrapper:hover .cs_brands_list {
   animation-play-state: paused;
@@ -2759,7 +2887,7 @@ hr {
   position: initial;
 }
 .cs_slider_arrows.cs_style_1.cs_type_1 .slick-arrow:hover {
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
 }
 .cs_slider_arrows.cs_style_1 .slick-arrow {
   width: 56px;
@@ -3479,7 +3607,7 @@ hr {
 }
 .cs_footer.cs_style_1 .cs_footer_widget_title::before {
   width: 100%;
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
 }
 .cs_footer.cs_style_1 .cs_footer_widget_title::after {
   width: 4px;
@@ -3491,7 +3619,7 @@ hr {
   margin-bottom: 10px;
 }
 .cs_footer.cs_style_1 .cs_footer_menu li a:hover {
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -3772,7 +3900,7 @@ hr {
   top: 0;
   opacity: 0;
   transition: all 0.3s ease;
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
 }
 .cs_sidebar.cs_style_1 .cs_service_category_list li:not(:last-child) {
   margin-bottom: 15px;
@@ -3806,7 +3934,7 @@ hr {
   transition: all 0.3s ease;
 }
 .cs_sidebar.cs_style_1 .cs_search .cs_search_button:hover {
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
 }
 .cs_sidebar.cs_style_1 .cs_recent_post_wrapper .cs_recent_post {
   padding: 20px 0;
@@ -3829,7 +3957,7 @@ hr {
 }
 .cs_sidebar.cs_style_1 .cs_recent_post .cs_post_meta,
 .cs_sidebar.cs_style_1 .cs_recent_post h3 a:hover {
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -3881,7 +4009,7 @@ hr {
   top: 0;
   opacity: 0;
   transition: all 0.3s ease;
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
 }
 .cs_tags_links .cs_tag_link:hover {
   color: var(--white-color);
@@ -4047,7 +4175,7 @@ hr {
   top: 0;
   opacity: 0;
   transition: all 0.4s ease;
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
 }
 .cs_isotop_filter.cs_style_1 li.active, .cs_isotop_filter.cs_style_1 li:hover {
   border-color: transparent;
@@ -4154,7 +4282,7 @@ hr {
   max-width: 1830px;
   height: 100%;
   margin: 45px auto 0;
-  padding: 290px 0px 230px;
+  padding: 200px 0px 230px;
 }
 .cs_hero.cs_style_1 .cs_hero_thumbnail img {
   width: 100%;
@@ -4554,7 +4682,7 @@ hr {
   flex-wrap: wrap;
 }
 .cs_card.cs_style_2 .cs_client_info_wrapper span {
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -4630,7 +4758,7 @@ hr {
   transition: all 0.6s ease-in-out;
 }
 .cs_iconbox.cs_style_2 .cs_iconbox_icon.cs_bg_1 {
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
 }
 .cs_iconbox.cs_style_2 .cs_iconbox_icon.cs_bg_2 {
   background: #FF5F85;
@@ -4725,7 +4853,7 @@ hr {
   color: var(--white-color);
 }
 .cs_iconbox.cs_style_4:hover .cs_iconbox_content {
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
 }
 .cs_iconbox.cs_style_4:hover .cs_iconbox_content::before, .cs_iconbox.cs_style_4:hover .cs_iconbox_content::after {
   display: none;
@@ -5532,7 +5660,7 @@ hr {
   opacity: 0;
   border-radius: inherit;
   transition: all 0.4s ease;
-  background-image: linear-gradient(245deg, #d324a8 -67.04%, #551dff 129.05%);
+  background-image: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
 }
 .cs_feature_step .cs_vertical_line {
   width: 1px;
@@ -5571,7 +5699,7 @@ hr {
   opacity: 0;
   border-radius: inherit;
   transition: all 0.4s ease;
-  background-image: linear-gradient(245deg, #d324a8 -67.04%, #551dff 129.05%);
+  background-image: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
 }
 .cs_feature_step::before {
   content: "";
@@ -5650,7 +5778,7 @@ hr {
   transition: all 0.6s ease-in-out;
 }
 .cs_feature_item h3 a:hover {
-  background: linear-gradient(245deg, #d324a8 -67.04%, #551dff 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -5684,7 +5812,7 @@ hr {
   -webkit-text-fill-color: transparent;
 }
 .cs_feature_item .cs_text_btn:hover {
-  background: linear-gradient(245deg, #d324a8 -67.04%, #551dff 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -6202,7 +6330,7 @@ hr {
   content: "";
   width: 100%;
   height: 100px;
-  background: linear-gradient(245deg, #d324a8 -67.04%, #551dff 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
   border-radius: 15px 15px 0 0;
   position: absolute;
   left: 0;
@@ -6237,7 +6365,7 @@ hr {
   padding: 0;
 }
 .cs_project_details .cs_project_info_list .cs_social_links.cs_style_2 a:hover {
-  background: linear-gradient(245deg, #d324a8 -67.04%, #551dff 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -6261,7 +6389,7 @@ hr {
 .cs_contact_desc .cs_contact_info_list {
   padding: 40px;
   border-radius: 20px 20px 0px 0px;
-  background: linear-gradient(245deg, #d324a8 -67.04%, #551dff 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
 }
 .cs_contact_desc .cs_contact_info_list li {
   padding: 20px 0;
@@ -6342,7 +6470,7 @@ hr {
   margin-right: 2px;
 }
 .cs_post.cs_style_1 .cs_post_title:hover a {
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -6359,7 +6487,7 @@ hr {
   background-size: 100% 1px;
 }
 .cs_post.cs_style_1 .cs_post_btn:hover {
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -6368,7 +6496,7 @@ hr {
   background-size: 0 1px;
 }
 .cs_post.cs_style_1:hover .cs_post_category {
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
 }
 .cs_post.cs_style_1.cs_type_1 .cs_post_btn,
 .cs_post.cs_style_1.cs_type_1 .cs_post_title a {
@@ -6394,12 +6522,13 @@ hr {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  line-clamp: 3;
 }
 .cs_post.cs_style_1.cs_type_2 .cs_posted_by {
   padding: 11px 16px;
   top: 20px;
   left: 20px;
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
 }
 .cs_post.cs_style_1.cs_type_2 .cs_posted_by span {
   line-height: 1em;
@@ -6439,7 +6568,7 @@ hr {
 .cs_post.cs_style_2 .cs_post_meta:first-child {
   border-radius: 50px;
   padding: 3px 20px;
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
   position: relative;
 }
 .cs_post.cs_style_2 .cs_post_meta:first-child::before {
@@ -6471,7 +6600,7 @@ hr {
   top: 10px;
 }
 .cs_post.cs_style_2 .cs_post_title:hover a {
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -6498,7 +6627,7 @@ hr {
 .cs_post.cs_style_2 .cs_post_btn:hover {
   color: var(--white-color);
   border-color: transparent;
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
 }
 
 .cs_posts_wrapper .cs_post.cs_style_1 {
@@ -6550,13 +6679,13 @@ hr {
   position: relative;
 }
 .page-link:hover {
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
   color: var(--white-color) !important;
   border-color: transparent;
 }
 
 .page-item.active .page-link {
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
   color: var(--white-color);
   border-color: transparent;
   pointer-events: none;
@@ -6602,7 +6731,7 @@ hr {
   padding: 11px 16px;
   top: 32px;
   left: 33px;
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
 }
 .cs_post_details .cs_posted_by span {
   line-height: 1em;
@@ -6618,7 +6747,7 @@ hr {
   width: 40px;
   height: 100%;
   border-radius: 10px 0 0 10px;
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
   position: absolute;
   left: 0;
   top: 0;
@@ -6684,7 +6813,7 @@ hr {
   gap: 20px;
 }
 .cs_post_details .cs_social_links.cs_style_2 a {
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: var(--body-color);
@@ -6746,7 +6875,7 @@ hr {
 }
 .cs_comment_body .cs_reply_btn {
   border-radius: 50px;
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
   color: var(--white-color);
   border: 0;
   outline: 0;
@@ -6940,7 +7069,7 @@ hr {
 }
 .cs_team_details .cs_contact_list i,
 .cs_team_details .cs_contact_list a:hover {
-  background: linear-gradient(245deg, #D324A8 -67.04%, #551DFF 129.05%);
+  background: linear-gradient(245deg, #C3F7FE -67.04%, #2DE6FF 129.05%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

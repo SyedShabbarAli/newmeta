@@ -37,11 +37,9 @@ const Testimonial3 = () => {
 
 
         const testimonialContent = [
-        {subtitle:'Marketing Manager', title:'Juliana Rose', content:'This is why having reviews and client testimonials is so important for your business. So, in this article,  go over some client testimonial examples you should be aware of and how you can go about gathering those testimonials for yourself. This is why having reviews and client testimonials is so important for your business. So, in this article, we’ll go over some client testimonial '},             
-        {subtitle:'UI/UX Designer', title:'Anjelina Rose', content:'This is why having reviews and client testimonials is so important for your business. So, in this article,  go over some client testimonial examples you should be aware of and how you can go about gathering those testimonials for yourself. This is why having reviews and client testimonials is so important for your business. So, in this article, we’ll go over some client testimonial'},             
-        {subtitle:'UI/UX Designer', title:'Anjelina Rose', content:'This is why having reviews and client testimonials is so important for your business. So, in this article,  go over some client testimonial examples you should be aware of and how you can go about gathering those testimonials for yourself. This is why having reviews and client testimonials is so important for your business. So, in this article, we’ll go over some client testimonial'},             
-        { subtitle:'UI/UX Designer', title:'Anjelina Rose', content:'This is why having reviews and client testimonials is so important for your business. So, in this article,  go over some client testimonial examples you should be aware of and how you can go about gathering those testimonials for yourself. This is why having reviews and client testimonials is so important for your business. So, in this article, we’ll go over some client testimonial'},             
-        {subtitle:'UI/UX Designer', title:'Anjelina Rose', content:'This is why having reviews and client testimonials is so important for your business. So, in this article,  go over some client testimonial examples you should be aware of and how you can go about gathering those testimonials for yourself. This is why having reviews and client testimonials is so important for your business. So, in this article, we’ll go over some client testimonial'},             
+        {subtitle:'Chief Medical Officer, Northwell RPM Program', title:'Dr. Nina Hassan', content:'MetaCrust gave us encrypted telemetry from 4,000+ home patients without draining their wearables. Deployment dropped from a quarter to two weeks, and our clinicians finally trust the data stream end-to-end.'},             
+        {subtitle:'Director of Operations, PolarSafe Mining', title:'Ethan Varga', content:'We needed ruggedized, battery-sensitive safety badges to report vitals underground. MetaCrust let us ship secure firmware updates overnight and cut battery overhead to under 15% while keeping CSA compliance.'},             
+        {subtitle:'VP of Product, AtmosSense Labs', title:'Leah Choudhury', content:'Environmental sensors on saildrones used to miss data sync windows whenever connectivity dipped. MetaCrust’s lightweight agents buffer, encrypt, and reconcile every packet without ballooning memory consumption.'},             
       ]; 
 
     return (
@@ -51,10 +49,10 @@ const Testimonial3 = () => {
         <div className="cs_section_heading cs_style_1 cs_center_column cs_mb_47 position-relative z-1">
           <div className="cs_section_subtitle cs_fs_18 cs_heading_color cs_mb_22">
             <Image src="/assets/img/icons/star-1.svg" alt="img" width={15} height={15}   />
-            <span>Testimonial</span>
+            <span>Customer Proof</span>
             <Image src="/assets/img/icons/star-1.svg" alt="img" width={15} height={15}   />
           </div>
-          <h2 className="cs_section_title cs_fs_48 cs_semibold mb-0 wow fadeInUp">What our clients say?</h2>
+          <h2 className="cs_section_title cs_fs_48 cs_semibold mb-0 wow fadeInUp">How teams deploy MetaCrust at scale</h2>
         </div>
         <div className="testimonial_slider_content cs_slider position-relative">
           <div className="cs_testimonial_shape_1 position-absolute">

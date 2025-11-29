@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="author" content="Themeservices" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/assets/img/metaLogo.png" sizes="any" />
       </head>
       <body className={`${sora.variable} ${dm_sans.variable}`}>
         {children}

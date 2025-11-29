@@ -39,9 +39,6 @@ const HeroBanner2 = () => {
               </div>
             </div>
           </div>
-          <div className="cs_hero_shape_1 position-absolute">
-            <Image src="/assets/img/dna-shape.png" alt="img" width={89} height={150}   />
-          </div>
           <div className="cs_hero_shape_2 position-absolute">
             <Image src="/assets/img/spring-shape-3.svg" alt="img" width={94} height={94}   />
           </div>

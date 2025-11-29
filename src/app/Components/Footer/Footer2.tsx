@@ -39,7 +39,7 @@ const Footer2 = () => {
         <div className="cs_footer_main cs_radius_30">
           <div className="cs_footer_desc">
             <div className="cs_brand">
-               <Image src="/assets/img/logo-2.svg" alt="img" width={194} height={36}   />
+               <Image src="/assets/img/logo-CsdF8INz.png" alt="img" width={194} height={36}   />
             </div>
             <div className="cs_footer_desc_text">Their teams technical expertise is truly outstanding. They took the time to thoroughly understand our goals and requirements and then designed and implemented solutions that not only addressed our immediate challenges but also positioned us for future growth.</div>
           </div>

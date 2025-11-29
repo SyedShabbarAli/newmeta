@@ -30,7 +30,7 @@ const Footer1 = () => {
           <div className="cs_footer_widget_wrapper">
             <div className="cs_footer_widget cs_text_widget">
               <div className="cs_brand cs_mb_32">
-                <Image src="/assets/img/logo-2.svg" alt="img" width={194} height={36}   />
+                <Image src="/assets/img/logo-CsdF8INz.png" alt="img" width={194} height={36}   />
               </div>
               <p className="cs_mb_32">It involves the use of CRM software and strategies to effectively manage customer relationships, improve customer satisfaction, and drive business growth.</p>
               <div className="cs_social_links cs_style_1 cs_heading_color">

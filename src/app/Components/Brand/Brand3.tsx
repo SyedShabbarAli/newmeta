@@ -1,13 +1,14 @@
-
 const Brand3 = () => {
 
         const chooseContent = [
-        {img:'/assets/img/brand-1.svg'},                         
-        {img:'/assets/img/brand-2.svg'},                         
-        {img:'/assets/img/brand-3.svg'},                         
-        {img:'/assets/img/brand-4.svg'},                         
-        {img:'/assets/img/brand-5.svg'},                         
-        {img:'/assets/img/brand-6.svg'},                         
+        {img:'/assets/brand-logo/DalInnovates_2023-DzzngbPp.webp'},                         
+        {img:'/assets/brand-logo/MCE-C1FK3Bdc.webp'},                         
+        {img:'/assets/brand-logo/Medtech-Dcl14M2B.png'},                         
+        {img:'/assets/brand-logo/NL-DbqNmfkK.webp'},                         
+        {img:'/assets/brand-logo/download.webp'},                         
+        {img:'/assets/brand-logo/genesis-BDdNM6op.webp'},                         
+        {img:'/assets/brand-logo/mitacs-DVbLWvkK.webp'},                         
+        {img:'/assets/brand-logo/nrc-vOIxbf_i.webp'},                         
       ]; 
 
     return (
